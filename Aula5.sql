@@ -27,5 +27,19 @@ insert into produtos values(1,"Creme hidratante",500,"branco");
 insert into produtos values(2,"Perfume Maracujá",50,"amarelo");
 select * from produtos;
 
+#Pedidos
+
+Create Table pedidos (
+	id Int primary key not null auto_increment,
+    pagamento Varchar (80),
+    valor Decimal (6,2),
+    produto_id int not null,
+    Foreign key (produto_id) references produtos(id)
+);
+
+insert into pedidos(pagamento,valor,produto_id) values("Pix", 29, 1);
+select * from pedidos;
+select * from produtos where id = 1
+
 
 
