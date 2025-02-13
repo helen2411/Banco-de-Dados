@@ -29,3 +29,6 @@ SELECT * FROM  employees WHERE last_name in ("Kalloufi", "Genin");
 
 -- Between
 SELECT * FROM salaries where salary BETWEEN 40000 AND 50000;
+
+-- SUM
+SELECT SUM(salary) FROM salaries;
