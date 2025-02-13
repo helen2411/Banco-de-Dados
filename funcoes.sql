@@ -15,4 +15,17 @@ SELECT COUNT(*) FROM salaries;
 SELECT COUNT(*) FROM employees WHERE  gender = "F";
 SELECT COUNT(*) FROM employees WHERE  first_name = "Georgi";
 
+-- like(* pesquisar)
+-- termo% -> desconsidera final
+SELECT * FROM employees WHERE first_name LIKE "Geo%" ;
+-- %termo -> desconsidera começo
+SELECT * FROM employees WHERE first_name LIKE "%or" ;
+-- termo% -> desconsidera começo e final
+SELECT * FROM employees WHERE first_name LIKE "%ni%" ;
 
+-- IN
+-- Para pesquisar apenas 1 nome use = , caso vá fazer múltiplas pesquisas utilize IN
+SELECT * FROM  employees WHERE last_name in ("Kalloufi", "Genin");
+
+-- Between
+SELECT * FROM salaries where salary BETWEEN 40000 AND 50000;
