@@ -29,3 +29,5 @@ Insert into Autores(nome,nacionalidade, id_autor) values ("A política e a líng
 Insert into Autores(nome,nacionalidade, id_autor) values ("Àgua Viva", 1973,3);
 
 drop table Livros;
+
+Select * from Autores;
