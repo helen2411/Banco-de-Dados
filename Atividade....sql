@@ -12,7 +12,7 @@ create table Livros (
     titulo Varchar (100) not null,
     ano_publicacao Int(4),
     id_autor int not null,
-	Foreign key (id_livro) references Autores(id_autor)
+	Foreign key (id_autor) references Autores(id_autor)
 );
 
 Insert into Autores(nome,nacionalidade) values ("John Bunyan", "Britânico");
@@ -23,11 +23,16 @@ Select * from Autores;
 Select * from Livros;
 
 Insert into Livros(titulo,ano_publicacao, id_autor) values ("O peregrino ", 1678, 1);
-Insert into Autores(nome,nacionalidade, id_autor) values ("A revolução dos Bichos", 1945,2 );
-Insert into Autores(nome,nacionalidade, id_autor) values ("1984", 1949,2);
-Insert into Autores(nome,nacionalidade, id_autor) values ("A política e a língua inglesa", 1946,2);
-Insert into Autores(nome,nacionalidade, id_autor) values ("Àgua Viva", 1973,3);
+Insert into Livros(titulo,ano_publicacao, id_autor) values ("A revolução dos Bichos", 1945,2 );
+Insert into Livros(titulo,ano_publicacao, id_autor) values ("1984", 1949,2);
+Insert into Livros(titulo,ano_publicacao, id_autor) values ("A política e a língua inglesa", 1946,2);
+Insert into Livros(titulo,ano_publicacao, id_autor) values ("Àgua Viva", 1973,3);
 
 drop table Livros;
 
 Select * from Autores;
+Select * from Livros;
+
+Select* from Livros where id_autor= 2;
+
+
