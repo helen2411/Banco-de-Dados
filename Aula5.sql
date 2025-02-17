@@ -37,7 +37,7 @@ Create Table pedidos (
     Foreign key (produto_id) references produtos(id)
 );
 
-insert into pedidos(pagamento,valor,produto_id) values("Pix", 29, 1);
+insert into pedidos(pagamento,valor,produto_id) values("Pix", 10, 1);
 select * from pedidos;
 select * from produtos where id = 1
 
