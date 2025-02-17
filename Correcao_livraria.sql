@@ -42,6 +42,9 @@ Insert Into livros_autores(id_autor, id_livro) values (2,4);
 
 Drop table livros_autores;
 
+-- Select <o que quero> from <primeira tabela> join <segunda tabela>
+-- On condição de como eu quero organizar
+
 Select Livros.titulo, Autores.nome from Livros Join livros_autores 
 on Livros.id_livro = Livros_autores.id_livro
 Join Autores on livros_autores.id_autor = Autores.id_autor;
