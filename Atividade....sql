@@ -35,4 +35,25 @@ Select * from Livros;
 
 Select* from Livros where id_autor= 2;
 
+Create Table livros_autores(
+	id_autor Int not null,
+    id_livro Int not null,
+    Foreign key (id_autor) references Autores(id_autor),
+    Foreign key (id_livro) references Livros(id_livro)
+);
+
+Select* from livros_autores;
+
+Insert Into livros_autores(id_autor, id_livro) values (1,1);
+Insert Into livros_autores(id_autor, id_livro) values (2,2);
+Insert Into livros_autores(id_autor, id_livro) values (2,3);
+Insert Into livros_autores(id_autor, id_livro) values (2,4);
+Insert Into livros_autores(id_autor, id_livro) values (3,5);
+
+Select Livros.titulo, Autores.nome from Livros Join livros_autores 
+on Livros.id_livro = Livros_autores.id_livro
+Join Autores on livros_autores.id_autor = Autores.id_autor;
+
+
+
 
