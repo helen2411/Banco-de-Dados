@@ -44,8 +44,8 @@ Select * from employees;
 Select * from dept_emp;
 
 -- O que quero, de onde, agrupar quem?
-Select gender, Count(gender) from employees Group by gender;
-Select dept_emp, Count(dept_no) from dept_emp Group By dept_no;
+Select gender as genero, Count(gender) as qtd_por_genero from employees Group by gender;
+Select dept_no, Count(dept_no) from dept_emp Group By dept_no;
 
 
 
