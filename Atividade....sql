@@ -51,7 +51,7 @@ Insert Into livros_autores(id_autor, id_livro) values (2,4);
 Insert Into livros_autores(id_autor, id_livro) values (3,5);
 
 Select Livros.titulo, Autores.nome from Livros Join livros_autores 
-on Livros.id_livro = Livros_autores.id_livro
+on Livros.id_livro = livros_autores.id_livro
 Join Autores on livros_autores.id_autor = Autores.id_autor;
 
 
