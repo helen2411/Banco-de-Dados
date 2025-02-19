@@ -27,7 +27,7 @@ insert into Pedidos(data_pedido, id_cliente) Values ("01/01/2025", 2);
 insert into Pedidos(data_pedido, id_cliente) Values ("04/01/2025", 5);
 insert into Pedidos(data_pedido, id_cliente) Values ("12/02/2025", 6) , ("25/03/2025",6);
 
-Select * from Pedidos;
+
 
 Select Pedidos.id_pedido, Clientes.nome from Pedidos join  Clientes
 on  Pedidos.id_cliente = Clientes.id_cliente;
@@ -35,8 +35,13 @@ on  Pedidos.id_cliente = Clientes.id_cliente;
 Select Pedidos.id_pedido, Clientes.nome from Clientes left join  Pedidos
 on  Pedidos.id_cliente = Clientes.id_cliente;
 
+Use Dados_Loja;
+Select * from Pedidos;
+-- nome coluna, count (coluna a ser contada), from Nome Tabela Group by nome da tabela;
+Select id_cliente, Count(id_pedido) from Pedidos Group by id_cliente;
 
-
+-- Select Clientes.nome, Count(Pedidos.id_pedido) As quantidade_pedidos From Clientes
+-- Join Pedidos on Clientes.id_cliente = Pedidos.id_cliente Group by Clientes.id_cliente;
 
 
 
