@@ -1,6 +1,8 @@
 create database Sabores_da_Fazenda;
 use Sabores_da_Fazenda;
 
+
+-- Tabela Clientes - Deverá ter um Banco de Dados Próprio
 create Table Clientes(
 	id_cliente int not null primary key auto_increment,
     nome_cliente Varchar(255),
@@ -9,6 +11,7 @@ create Table Clientes(
     endereco Varchar (255)
 );
 
+-- Telefone Clientes
 create Table Telefone_Clientes(
 	id_telefone int not null primary key auto_increment,
     telefone Varchar(15),
@@ -16,12 +19,14 @@ create Table Telefone_Clientes(
 	Foreign key (id_cliente) references Clientes(id_cliente)
 );
 
+-- Tabela Fornecedores - Será incluída no banco de Dados de Matéria Prima que será criado
 create Table Fornecedores(
 	id_fornecedor int not null primary key auto_increment,
     nome_fornecedor Varchar(255),
     insumos Varchar(255)
 );
 
+-- Telefone Fornecedor 
 create Table Telefone_Fornecedor(
 	id_telefone int not null primary key auto_increment,
     telefone Varchar(15),
@@ -29,6 +34,7 @@ create Table Telefone_Fornecedor(
 	Foreign key (id_fornecedor) references Fornecedores(id_fornecedor)
 );
 
+-- Tabela Produtos - Deverá ter um banco de Dados específicifo para Queijos e Doces 
 create Table Produtos(
 	id_produto int not null primary key auto_increment,
     nome_queijo Varchar(255),
@@ -39,6 +45,7 @@ create Table Produtos(
     Foreign key (id_fornecedor) references Fornecedores(id_fornecedor)
 );
 
+-- Tabela Funcionários - Deverá ter um banco de Dados específico 
 create Table Funcionarios(
 	id_funcionario int not null primary key auto_increment,
     nome_funcionario Varchar(255),
@@ -46,6 +53,7 @@ create Table Funcionarios(
 	data_contratacao date
 );
 
+-- Tabela Produção- Estará alinhada a produtos 
 create Table Producao(
 	id_producao int not null primary key auto_increment,
     data_producao date,
@@ -56,6 +64,7 @@ create Table Producao(
     Foreign key (id_funcionario) references Funcionarios(id_funcionario)
 );
 
+-- Tabela de Vendas será vinculada a de clientes
 create Table Vendas(
 	id_vendas int not null primary key auto_increment,
     data_venda date, 
