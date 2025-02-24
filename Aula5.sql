@@ -34,7 +34,7 @@ Create Table pedidos (
     pagamento Varchar (80),
     valor Decimal (6,2),
     produto_id int not null,
-    Foreign key (produto_id) references produtos(id)
+    Foreign key (produto_id) references produtos(id_)
 );
 
 insert into pedidos(pagamento,valor,produto_id) values("Pix", 10, 1);
