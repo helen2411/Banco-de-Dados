@@ -1,7 +1,6 @@
 create database Sabores_da_Fazenda;
 use Sabores_da_Fazenda;
 
-
 -- Tabela Clientes - Deverá ter um Banco de Dados Próprio
 create Table Clientes(
 	id_cliente int not null primary key auto_increment,
