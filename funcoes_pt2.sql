@@ -32,3 +32,14 @@ Select DateDiff(hire_date,birth_date) From employees;
 
 -- Filtragem de Datas no formato desejado
 Select first_name , date_format( hire_date, "%d / %m /%y") from employees;
+
+Create Table emails (
+id int primary key auto_increment,
+primario Varchar(255) not null
+);
+
+Insert emails (primario) Values ("helen lais @ gmail . com");
+
+Select * From emails;
+-- Remove espaços iniciais e finais que estão em branco
+Select trim(primario) from emails;
